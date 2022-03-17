@@ -10,12 +10,27 @@ npm install @sallar/rn-stacks
 
 ## Usage
 
-```js
-import { multiply } from "@sallar/rn-stacks";
+```jsx
+import { HStack, VStack, Spacer, Box } from '@sallar/rn-stacks';
 
 // ...
 
-const result = await multiply(3, 7);
+<Box p={16} fill>
+  <VStack>
+    <HStack justifyContent="space-between">
+      <Text>HStack1</Text>
+      <Text>HStack1</Text>
+    </HStack>
+    <HStack justifyContent="space-around">
+      <Text>HStack2</Text>
+      <Text>HStack2</Text>
+    </HStack>
+  </VStack>
+  <Spacer />
+  <VStack m={16}>
+    <Text>Im going to bottom</Text>
+  </VStack>
+</Box>;
 ```
 
 ## Contributing

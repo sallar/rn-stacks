@@ -1,31 +1,36 @@
 import * as React from 'react';
 
-import { StyleSheet, View, Text } from 'react-native';
-import { multiply } from '@sallar/rn-stacks';
+import { StyleSheet, Text, SafeAreaView } from 'react-native';
+import { VStack, HStack, Box, Spacer } from '@sallar/rn-stacks';
 
 export default function App() {
-  const [result, setResult] = React.useState<number | undefined>();
-
-  React.useEffect(() => {
-    multiply(3, 7).then(setResult);
-  }, []);
-
   return (
-    <View style={styles.container}>
-      <Text>Result: {result}</Text>
-    </View>
+    <SafeAreaView style={styles.root}>
+      <Box p={16} fill>
+        <VStack>
+          <HStack justifyContent="space-between">
+            <Text>HStack1</Text>
+            <Text>HStack1</Text>
+          </HStack>
+          <HStack
+            justifyContent="space-around"
+            style={{ backgroundColor: '#f0f0f0' }}
+          >
+            <Text>HStack2</Text>
+            <Text>HStack2</Text>
+          </HStack>
+        </VStack>
+        <Spacer />
+        <VStack m={16}>
+          <Text>Im going to bottom</Text>
+        </VStack>
+      </Box>
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
+  root: {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  box: {
-    width: 60,
-    height: 60,
-    marginVertical: 20,
   },
 });
