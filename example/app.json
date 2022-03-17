@@ -1,0 +1,22 @@
+{
+  "name": "@sallar/rn-stacks-example",
+  "displayName": "RnStacks Example",
+  "expo": {
+    "name": "@sallar/rn-stacks-example",
+    "slug": "sallar-rn-stacks-example",
+    "description": "Example app for @sallar/rn-stacks",
+    "privacy": "public",
+    "version": "1.0.0",
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
